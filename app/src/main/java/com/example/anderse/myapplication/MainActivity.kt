@@ -1,5 +1,6 @@
 package com.example.anderse.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -19,6 +20,18 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener{
             countMe(it)
         }
+        button3.setOnClickListener{
+            openrandom()
+        }
+    }
+
+    private fun openrandom() {
+        val intent = Intent(this, RandomActivity::class.java)
+        // Start the new activity.
+        val countString = textView4.text.toString()
+        var count: Int = Integer.parseInt(countString)
+        intent.putExtra(RandomActivity.TOTAL_COUNT,count)
+        startActivity(intent)
     }
 
     private fun toastMe(view: View) {
