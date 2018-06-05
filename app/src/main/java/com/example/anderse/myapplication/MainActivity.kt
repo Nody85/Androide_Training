@@ -11,15 +11,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        button.setOnClickListener {
+            toastMe(it)
+        }
+
+        button2.setOnClickListener{
+            countMe(it)
+        }
     }
 
-    fun toastMe(view: View) {
+    private fun toastMe(view: View) {
         // val myToast = Toast.makeText(this, message, duration);
         val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
         myToast.show()
     }
 
-    fun countMe(view: View) {
+    private fun countMe(view: View) {
         // Get the text view
         //val showCountTextView = findViewById(R.id.textView4) as TextView
         val countString = textView4.text.toString()

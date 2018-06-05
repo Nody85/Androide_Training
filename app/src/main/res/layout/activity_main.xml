@@ -34,7 +34,6 @@
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:text="Toast"
-        android:onClick="toastMe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -47,7 +46,6 @@
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:text="Count"
-        android:onClick="countMe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/button" />
